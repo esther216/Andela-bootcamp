@@ -38,7 +38,7 @@
     it("The car shoud have four (4) wheels except its a type of trailer", function() {
       var man  = new Car('MAN', 'Truck', 'trailer');
       expect(man.numOfWheels).to.equal(8);
-      expect(man.isSaloon).to.equal(false);
+      expect(man.isSaloon).to.be(false);
 
       var koenigsegg = new Car('Koenigsegg', 'Agera R');
       expect(koenigsegg.numOfWheels).to.equal(4);

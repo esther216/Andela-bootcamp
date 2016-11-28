@@ -103,9 +103,17 @@ module.exports={
 			if(this.name === "Porshe"){
 				this.speed= "250 km/h";
 			}
-			return Car;
+			return this;
 		}
 		
+	},
+	isSaloon: function(){
+		Car.call(this,name, model, type);
+		if(this.numOfWheels === 4){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
-
 }
