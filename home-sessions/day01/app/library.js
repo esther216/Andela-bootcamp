@@ -83,6 +83,8 @@ module.exports={
 		this.numOfDoors= 4;
 		this.numOfWheels= 4;
 		this.speed;
+		this.isSaloon;
+
 		if(name === undefined && model === undefined){
 			this.name= "General";
 			this.model= "GM";
@@ -95,7 +97,12 @@ module.exports={
 			this.numOfWheels = 8;
 			this.speed= "0 km/h";
 		}
-
+		if(this.numOfWheels === 4){
+			this.isSaloon = true;
+		}
+		else{
+			this.isSaloon = false; 
+		}
 		this.drive= function(num){
 			if(this.type === 'trailer'){
 				this.speed= "77 km/h";
@@ -106,14 +113,6 @@ module.exports={
 			return this;
 		}
 		
-	},
-	isSaloon: function(){
-		Car.call(this,name, model, type);
-		if(this.numOfWheels === 4){
-			return true;
-		}
-		else{
-			return false;
-		}
 	}
+	
 }
