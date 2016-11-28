@@ -75,5 +75,37 @@ module.exports={
 		  return primeNumbers;
 
 	  }
-	 }
+	},
+	Car: function(name, model, type){
+		this.name= name;
+		this.model= model;
+		this.type= type;
+		this.numOfDoors= 4;
+		this.numOfWheels= 4;
+		this.speed;
+		if(name === undefined && model === undefined){
+			this.name= "General";
+			this.model= "GM";
+		}
+
+		if(name === "Porshe" || name==="Koenigsegg"){
+			this.numOfDoors= 2;
+		}
+		if(type === "trailer"){
+			this.numOfWheels = 8;
+			this.speed= "0 km/h";
+		}
+
+		this.drive= function(num){
+			if(this.type === 'trailer'){
+				this.speed= "77 km/h";
+			}
+			if(this.name === "Porshe"){
+				this.speed= "250 km/h";
+			}
+			return Car;
+		}
+		
+	}
+
 }
