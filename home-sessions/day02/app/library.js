@@ -1,12 +1,13 @@
 module.exports={
 	words: function(data){
-		var regEx= /\n|\t|[ ]/;
-		var splitted= data.split(regEx);
+		//split data
+		var splitted= data.replace(/\n|\t/g," ").replace(/[, ]+/g," ").split(" ");
+		
+		// create an object literal to store result
 		var occurrence={};
-	  occurrence[splitted[0]]= 1;
 	  
-	  for(var i=1; i < splitted.length; i++){
-	    if(splitted[i] in occurrence){
+	  for(var i=0; i < splitted.length; i++){
+	    if(Object.hasOwnProperty.call(occurrence,splitted[i])){
 	      occurrence[splitted[i]]++;
 	    }
 	    else{
