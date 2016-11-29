@@ -15,5 +15,25 @@ module.exports={
 	    }
 	  }
 	  return occurrence;
+	},
+	findMinMax: function(numList){
+		var result= [];
+	  var smallest = numList[0];
+	  var largest= numList[0];
+	  
+	  for(var i= 1; i < numList.length; i++){
+	    if(numList[i] > largest){
+	     largest = numList[i];
+	    }
+	    if(numList[i] < smallest){
+	     smallest= numList[i];
+	    }
+	  }
+	  result.push(smallest);
+	  result.push(largest);
+	  if(result[0] == result[1]){
+	    result.pop(result[1]);
+	  }
+	  return result;
 	}
 }
