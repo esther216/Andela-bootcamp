@@ -1,0 +1,15 @@
+{
+  "name": "user-verfication",
+  "version": "1.0.0",
+  "description": "A command line application that verifies a github user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Git",
+    "CLI"
+  ],
+  "author": "Esther Falayi",
+  "license": "ISC"
+}
