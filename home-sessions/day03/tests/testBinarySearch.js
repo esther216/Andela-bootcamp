@@ -1,6 +1,5 @@
 'use strict';
 var binarySearch = require ('../app/library.js').binarySearch;
-
 var expect = require ('expect');
 binarySearch();
 describe('Binary Search to traverse an ordered list, effectively', function() {
