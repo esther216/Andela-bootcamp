@@ -15,7 +15,7 @@ module.exports={
       var sumAP= len*(2*data[0] + (len -1)*diff)/2;
          
       //calculate sum of GP series
-      var sumGP= (data[0]*(1- Math.pow(ratio, len)))/(1 - ratio);
+      var sumGPit= (data[0]*(1- Math.pow(ratio, len)))/(1 - ratio);
          
       //initialise computed sum
       var realSum= 0;
@@ -33,6 +33,20 @@ module.exports={
       else{
         return -1;
       }
+		}
+	},
+	fizzBuzz: function(num){
+		if(num % 15 === 0){
+			return "FizzBuzz";
+		}
+		else if(num % 5 === 0){
+			return "Buzz";
+		}
+		else if(num % 3 === 0){
+			return "Fizz";
+		}
+		else{
+			return num;
 		}
 	}
 }
