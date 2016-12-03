@@ -95,4 +95,4 @@ Array.prototype.indexOf = function () {
 };
 var oneToTwenty = [].toTwenty();
 var twoToForty = [].toForty();
-var tenToOneThousand = [].toOneThousand()
+var tenToOneThousand = [].toOneThousand();

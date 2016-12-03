@@ -68,7 +68,7 @@ module.exports={
 				  this.push(i);
 				}
 				return this;
-				}
+			}
 			Array.prototype.search = function binarySearch(randomNumber) {
 				var start = 0;
 				var end = this.length -1;
